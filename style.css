@@ -34,7 +34,9 @@ body{
 }
 /* main style */
 
-
+.hamburger{
+display: none;
+}
 
 nav{
     max-width: 1600px;
@@ -56,6 +58,7 @@ nav .menu a{
     text-decoration: none;
 
 }
+
 
 .banner-container{
     position: relative;
@@ -87,25 +90,24 @@ nav .menu a{
  position: absolute;
  right: 600px;
 
-
 }
+
 .banner-img1{
     width: 350px;
     height: 350px;
 }
+
 .banner-image{
-    justify-items: center;
-    
+    justify-items: center;  
 }
 
-
 .banner-img2{
-   
     position: absolute;
     left: 50%;
     top: 38%;
     transform: translate(-50%, -50%);
 }
+
 .banner-header{
     color: white;
     font-size: 30px;
@@ -114,6 +116,7 @@ nav .menu a{
     margin-bottom: 30px;
     margin-top: 20px;
 } 
+
 .btn2{
     color:  rgba(0, 255, 136, 1);
     border: 1px solid  rgba(0, 255, 136, 1);
@@ -123,12 +126,14 @@ nav .menu a{
     font-weight: 600px;
     margin-top: 16px;
 }
+
 .banner-header1{
     color: white;
     font-size: 30px;
     text-align: center;
 
 }
+
 .number-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -172,16 +177,13 @@ nav .menu a{
     opacity: 60%;
     font-size: 20px;
     margin-top: 20px;
-
 }
-
 
 .card-1{
     grid-area: c1;
 }
 .card-2{
     grid-area: c2;
-
 }
 .card-3{
 grid-area: c3;
@@ -192,17 +194,6 @@ grid-area: c4;
 .card-5{
  grid-area: c5;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .image-info h4{
     color: white;
@@ -326,6 +317,41 @@ footer h3{
     color: white;
     margin-top: 70px;
 }
+@media screen and (max-width: 572px) {
+    .hamburger{
+        display: block;
+    }
+    nav .menu{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+     .number-container{
+        grid-template-columns: repeat(1,4fr);
+        gap: 30px;
+     }
+    .img-card-section {
+        grid-template-columns: repeat(1,5fr);
+        grid-area: 
+        "c1 c1 c1 c1 c1 c1"
+        "c2 c2 c2 c2 c2 c2"
+        "c3 c3 c3  c3 c3 c3"
+        "c4 c4 c4 c4 c4 c4"
+        "c5 c5 c5 c5 c5 c5 ";
+        padding: 30px;
+        
+    }
+    .section-vedio{
+        grid-template-columns: repeat(1,3fr);
+    }
+    footer ul li a{
+       
+        
+        
+        
+}
+
 
 
 
