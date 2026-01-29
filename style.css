@@ -44,7 +44,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     margin-top: 30px;
 }
 nav .menu{
@@ -88,7 +88,7 @@ nav .menu a{
  text-align: center;
  padding: 10px;
  position: absolute;
- right: 600px;
+ right: 550px;
 
 }
 
@@ -161,9 +161,9 @@ nav .menu a{
     margin-top: 30px;
     display: grid;
     grid-template-areas:
-    "c1 c1 c1 c1 c2 c2 c2 c2 c2 c2 c2 c2" 
-    "c1 c1 c1 c1 c3 c3 c3 c3 c3 c3 c3 c3"
-    "c4 c4 c4 c4 c4 c4 c4 c4 c5 c5 c5 c5";
+    "c1 c1 c1 c1 c2 c2 c2 c2 c2 c2 " 
+    "c1 c1 c1 c1 c3 c3 c3 c3 c3 c3 "
+    "c4 c4 c4 c4 c4 c4 c4 c4 c5 c5 ";
     gap: 30px;
 
 }
@@ -209,13 +209,16 @@ grid-area: c4;
 .section-vedio{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-
+    gap: 30px;
+    justify-content: center;
+    justify-items: center;
 }
 .vedio-info{
     width: 380px;
-    height: 440px;
+    /* height: 440px; */
     background-color: rgba(37, 13, 68, 1);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px;
     
 
 }
@@ -290,7 +293,8 @@ padding: 120px 0;
 
 }
 footer ul{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -317,39 +321,77 @@ footer h3{
     color: white;
     margin-top: 70px;
 }
+
+
+
+
+
+
+
+
 @media screen and (max-width: 572px) {
     .hamburger{
         display: block;
     }
+    nav{
+        margin-bottom: 30px;
+    }
     nav .menu{
         display: none;
     }
-    .btn{
+    nav .btn{
         display: none;
+        margin-bottom: 10px;
+    }
+    .banner-header1{
+        margin-top: 0px;
     }
      .number-container{
-        grid-template-columns: repeat(1,4fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 30px;
      }
     .img-card-section {
         grid-template-columns: repeat(1,5fr);
-        grid-area: 
+        grid-template-areas: 
         "c1 c1 c1 c1 c1 c1"
         "c2 c2 c2 c2 c2 c2"
         "c3 c3 c3  c3 c3 c3"
         "c4 c4 c4 c4 c4 c4"
-        "c5 c5 c5 c5 c5 c5 ";
+        "c5 c5 c5 c5 c5 c5";
         padding: 30px;
         
     }
     .section-vedio{
-        grid-template-columns: repeat(1,3fr);
+        grid-template-columns: repeat(1,1fr);
+        
     }
-    footer ul li a{
-       
+    .host-container{
+    
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 10px ;
+    }
+    .host-description{
+        text-align: center;
         
-        
-        
+    }
+    .host-description p{
+        max-width: 440px;
+    }
+    .host-image{
+        margin-right: 0px;
+    }
+.host-icons{
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer ul{
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
 }
 
 
