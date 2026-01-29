@@ -293,12 +293,15 @@ padding: 120px 0;
 
 }
 footer ul{
+     max-width: 540px;
+     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     justify-content: center;
     align-items: center;
     gap: 30px;
     margin-top: 20px;
+   
     
 }
 footer ul li a{
